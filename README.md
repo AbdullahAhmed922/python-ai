@@ -13,6 +13,10 @@ The core of the learning path, divided into lessons and a milestone project:
 - **`lesson_01_intro.py`**: Introduction to Python and personal AI vision.
 - **`lesson_02_toolkit.py`**: AI Dev Toolkit configuration (Python, uv, Ollama, Claude Code).
 - **`lesson_04_print_input.py`**: Practical application of `input()` and `print()` to create a dynamic AI consultation prompt.
+- **`lesson_05_variables.py`**: Working with Python variables to store AI context.
+- **`lesson_06_strings_prompts.py`**: Advanced string manipulation for structured prompting.
+- **`lesson_07_conditions.py`**: Using conditional logic to create adaptive AI responses.
+- **`lesson_08_mini_chatbot.py`**: Building a basic interactive chatbot loop.
 - **`project_m1_prompt_kit.py`**: **Module 1 Capstone Project** — A professional Business Prompt Kit that generates tailored AI prompts for Marketing, Customer Service, and Growth based on client data.
 
 ### 📄 Documentation (`docs/`)

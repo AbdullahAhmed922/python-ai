@@ -31,6 +31,25 @@ Interactive Jupyter Notebooks for rapid experimentation and data exploration.
 
 ---
 
+## 🤖 TechFix Bot — Intent Design Table
+
+The chatbot in `code/lesson_08_mini_chatbot.py` is built for **TechFix Laptop Care**, a local laptop repair shop in Hafeez Center, Lahore. Below is the design table that maps every intent the bot recognises.
+
+| # | Intent | User Wants | Keywords | Bot Reply |
+|---|--------|-----------|----------|-----------|
+| 1 | **Greeting** | Say hello | `hi`, `hello`, `salam` | `Walaikum Assalam, {name}! How can I help you with your laptop today?` |
+| 2 | **Timings** | Know shop hours | `timing`, `time`, `open`, `hours` | `We are open 11 am to 9 pm, Monday to Saturday.` |
+| 3 | **Fees** | Know the cost | `fee`, `price`, `cost`, `charges` | `Basic diagnostic and cleaning fee is 1,500 PKR.` |
+| 4 | **Location** | Find the shop | `location`, `address`, `where` | `We are on the 2nd Floor, Hafeez Center, Gulberg III, Lahore.` |
+| 5 | **Appointment** | Book a repair | `appointment`, `book`, `repair`, `upgrade` | `Sure, {name}! Share your laptop model and we will book a repair slot for you.` |
+| 6 | **Complaint** | Report a problem | `late`, `complaint`, `bad`, `broken` | `Sorry about that, {name}. Our shop manager will call you today.` |
+| 7 | **Human Agent** | Talk to a person | `agent`, `human` | `Connecting you to a human...` *(ends chat)* |
+| 8 | **Fallback** | Anything else | *(no match)* | Echoes the question inside a future-AI prompt template |
+
+> **Design note:** Complaints are checked *before* FAQ intents so a frustrated user who mentions a keyword like "fee" inside a complaint is not given a generic FAQ answer.
+
+---
+
 ## 🛠️ AI Dev Toolkit
 
 This project is built using a modern AI engineering stack:

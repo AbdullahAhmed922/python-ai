@@ -1,0 +1,13 @@
+{
+  "business_name": "Sweet Crumbs",
+  "location": "Gulberg, Lahore",
+  "hours": "Daily from 9:00 AM to 10:00 PM",
+  "delivery_policy": "Delivery is 200 PKR across Lahore, and free for orders over 3,000 PKR.",
+  "custom_cakes": "Custom birthday and wedding cakes require 24 hours advance notice.",
+  "prices": {
+    "cupcake": 250,
+    "brownie": 300,
+    "chocolate cake": 1500,
+    "red velvet cake": 1800
+  }
+}

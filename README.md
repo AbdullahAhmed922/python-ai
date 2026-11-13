@@ -1,244 +1,322 @@
 # 🤖 AI-Driven Python Learning Journey
 
-Welcome to the **AI-Driven Python Learning Journey**! This repository documents a structured, practical progression from Python fundamentals to building **Applied AI & Agentic Workflows**.
+<div align="center">
 
-The primary objective is to move from foundational programming and scripting toward building reliable, production-ready AI systems, hybrid rule/LLM pipelines, and autonomous workflows designed for real-world business operations.
+**From Python fundamentals → Applied AI & Agentic Workflows**
+
+[![Python](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-1.4+-1C3C3C?logo=langchain&logoColor=white)](https://www.langchain.com/)
+[![Ollama](https://img.shields.io/badge/Ollama-Local_LLMs-000000?logo=ollama&logoColor=white)](https://ollama.ai/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A structured, hands-on progression from scripting basics to building **production-ready AI systems**, **hybrid rule/LLM pipelines**, and **autonomous agentic workflows** — all running on local models with zero API costs.
+
+[Getting Started](#-getting-started) · [Projects](#-featured-projects) · [Lessons](#-curriculum-map) · [Docs](#-documentation) · [Principles](#-engineering-principles)
+
+</div>
+
+---
+
+## ✨ Highlights
+
+- 🏗️ **2 capstone projects** — a conversational content studio and an agentic business assistant with tool-calling, human-in-the-loop approval, and WhatsApp order extraction
+- 🤖 **First agent** — LangChain tool-calling agent with human approval gates, FAQ lookup, pricing tools, and order placement
+- 🧠 **Structured extraction** — Ollama JSON-mode parsing of messy bilingual WhatsApp messages with hallucination detection
+- 🔒 **100% local inference** — every project runs on Ollama (Gemma 3 4B, Qwen 2.5 3B, Llama 3.2) with zero cloud dependency
+- 📊 **Self-documenting** — each project ships with architectural design docs, test matrices, and real terminal run screenshots
 
 ---
 
 ## 📂 Repository Structure
 
-### 💻 Code (`code/`)
-
-#### 📦 Module 2: LLM Integration, Memory, Personas & Batch Production
-- **[`code/project_m2_content_studio.py`](code/project_m2_content_studio.py)**: **Module 2 Capstone** — *AI Content Studio*. A multi-purpose operational AI tool for Sweet Crumbs Bakery that automates batch menu descriptions with cloud cost estimation, streams social media posts with Roman Urdu cultural translations, provides instant 0-token dictionary price lookups, and conducts customer chat using a bounded sliding-window memory and strictly grounded business facts (powered by `ollama:gemma3:4b`).
-- **[`code/lesson_2_4_batch_writer.py`](code/lesson_2_4_batch_writer.py)**: **Batch Copywriter** — Automated batch generation of appetizing pastry descriptions with token accumulation, execution timing, and skipping unavailable items.
-- **[`code/lesson_2_3_persona_bot.py`](code/lesson_2_3_persona_bot.py)**: **Persona Bot** — Dynamic persona-switching assistant (`friendly`, `formal`, `sales`) grounded in real bakery business facts.
-- **[`code/lesson_2_2_chat_memory.py`](code/lesson_2_2_chat_memory.py)**: **Conversational Memory** — Multi-turn chat assistant with sliding-window memory management to prevent unbounded context growth.
-- **[`code/lesson_2_1_first_ai_call.py`](code/lesson_2_1_first_ai_call.py)**: **First AI Call & Profiling** — LLM invocation for topic explanations with automated token count and latency tracking.
-
-#### 📦 Module 1: Foundations & Interactive Business Automations
-- **[`code/project_m1_front_desk.py`](code/project_m1_front_desk.py)**: **Module 1 Capstone (Part 2)** — *Sweet Crumbs Bakery AI Front Desk Assistant*. An automated business front desk assistant featuring FAQ resolution, an interactive `/quote` pricing and discount engine, privacy-preserving AI model routing (local Ollama Llama 3.2 vs. cloud), token & cost calculation, and end-of-session reporting.
-- **[`code/project_m1_prompt_kit.py`](code/project_m1_prompt_kit.py)**: **Module 1 Capstone (Part 1)** — *Business Prompt Kit*. Generates customized AI prompt templates for Marketing, Customer Support, and Growth tailored to client business data.
-- **[`code/lesson_08_mini_chatbot.py`](code/lesson_08_mini_chatbot.py)**: **TechFix Laptop Care Bot** — Interactive FAQ bot with a complaint-first intent hierarchy, human agent handover, and chat metrics summary.
-- **[`code/lesson_07_conditions.py`](code/lesson_07_conditions.py)**: **Smart Model Router** — Routes user tasks between local (Ollama) and cloud models based on task complexity, token estimation, and data privacy constraints.
-- **[`code/lesson_06_strings_prompts.py`](code/lesson_06_strings_prompts.py)**: **String Hygiene & Prompt Sanitization** — String cleaning (`.strip()`, `.lower()`, `.title()`, `.capitalize()`, `.startswith()`) for robust input handling.
-- **[`code/lesson_05_variables.py`](code/lesson_05_variables.py)**: **State & Context Management** — Managing state and prompt contexts with typed Python variables.
-- **[`code/lesson_04_print_input.py`](code/lesson_04_print_input.py)**: **Dynamic Prompt Generator** — Interactive consultation prompts using `input()` and formatted console output.
-- **[`code/lesson_02_toolkit.py`](code/lesson_02_toolkit.py)**: **Toolchain Verification** — Python environment, `uv`, Ollama, and IDE setup diagnostics.
-- **[`code/lesson_01_intro.py`](code/lesson_01_intro.py)**: **Personal Vision & Roadmap** — Learning strategy for Applied AI & Agentic Workflow Engineering.
-
----
-
-### 📄 Documentation & Results (`docs/`)
-
-Comprehensive records of system designs, experiment logs, test runs, and evaluations:
-
-- **Module 2 Documentation**:
-  - **[`docs/project-m2-cp1-design.md`](docs/project-m2-cp1-design.md)**: Architectural design, model temperature allocation, facts mapping, and test matrix for the Sweet Crumbs AI Content Studio.
-  - **[`docs/project-m2-cp1-results.md`](docs/project-m2-cp1-results.md)**: Factual QA validation, hallucination checks, tone analysis, and Roman Urdu translation evaluations.
-  - **[`docs/my-answers-module-2.md`](docs/my-answers-module-2.md)**: Conceptual checkpoint answers and quick-check verification for Lessons 2.1 to 2.4.
-- **Module 1 Documentation**:
-  - **[`docs/project-m1-part2-design.md`](docs/project-m1-part2-design.md)**: Architectural specification, intent hierarchy, pricing engine formulas, and verification test cases for the Sweet Crumbs Front Desk.
-  - **[`docs/project-m1-part2-results.md`](docs/project-m1-part2-results.md)**: Real-world local LLM test runs analyzing grounded vs. hallucinated responses for out-of-scope customer inquiries.
-  - **[`docs/project-m1-results.md`](docs/project-m1-results.md)**: Output evaluation and testing logs for the Business Prompt Kit.
-  - **[`docs/my-answers-module-1.md`](docs/my-answers-module-1.md)**: Conceptual checkpoint answers for Module 1.
-  - **[`docs/prompt-test.md`](docs/prompt-test.md)**: Prompt engineering experiments and structured output testing.
-  - **[`docs/ollama-first-chat.md`](docs/ollama-first-chat.md)**: Local LLM setup and inference verification via Ollama.
-- **Visual Proofs & Artifacts**:
-  - **[`docs/project-m2-cp1-run.png`](docs/project-m2-cp1-run.png)**: Terminal session showing batch menu generation, streaming posts, Roman Urdu translations, and grounded chat.
-  - **[`docs/project-m1-part2-run.png`](docs/project-m1-part2-run.png)**: Complete interactive run of the Sweet Crumbs AI Front Desk Assistant.
-  - **[`docs/project-m1-run.png`](docs/project-m1-run.png)**: Terminal output of the Module 1 Part 1 prompt generation kit.
-  - **[`docs/setup-check.png`](docs/setup-check.png)**: AI development environment and local toolchain diagnostics.
-
----
-
-### 📓 Notebooks (`notebooks/`)
-
-Interactive Jupyter Notebooks for experimentation, data analysis, and prototyping with `ipykernel`.
-
----
-
-## 🥐 Featured Project: Sweet Crumbs Bakery — AI Ecosystem
-*Source: [`code/project_m1_front_desk.py`](code/project_m1_front_desk.py) | [`code/project_m2_content_studio.py`](code/project_m2_content_studio.py)*
-
-The Sweet Crumbs Bakery automation represents an end-to-end operational AI ecosystem, evolving from a customer-facing front-desk bot into a full-fledged **AI Content Studio**.
-
 ```
-                        ┌─────────────────────────────────────────┐
-                        │       Sweet Crumbs AI Ecosystem         │
-                        └───────────────────┬─────────────────────┘
-                                            │
-               ┌────────────────────────────┴───────────────────────────┐
-               ▼                                                        ▼
-  ┌─────────────────────────┐                             ┌─────────────────────────┐
-  │ Module 1: Front Desk    │                             │ Module 2: Content Studio│
-  ├─────────────────────────┤                             ├─────────────────────────┤
-  │ • Complaint-first routing│                             │ • Batch menu copywriter │
-  │ • Interactive /quote    │                             │ • Multi-tone social post│
-  │ • PII privacy router    │                             │ • Roman Urdu translator │
-  │ • Rule + local AI blend │                             │ • 0-token price lookup  │
-  └─────────────────────────┘                             │ • Sliding-window memory │
-                                                          └─────────────────────────┘
+python-ai/
+├── code/                          # All source code
+│   ├── module-1/                  # Module 1 lessons & capstones
+│   │   ├── project_m1_front_desk.py
+│   │   ├── project_m1_prompt_kit.py
+│   │   └── lesson_01..08_*.py
+│   ├── project_m2_content_studio.py    # Module 2 Checkpoint Capstone
+│   ├── project_m2_business_assistant.py # Module 2 Final Capstone ⭐
+│   ├── lesson_2_1..2_8_*.py            # Module 2 lessons
+│   ├── business.json              # Owner-editable bakery facts
+│   ├── faq.json                   # FAQ knowledge base
+│   └── orders.json                # Persisted order data
+├── docs/                          # Design docs, test results, screenshots
+│   ├── module-1/                  # Module 1 documentation
+│   └── *.md / *.png               # Module 2 documentation
+├── notebooks/                     # Jupyter notebooks for experimentation
+├── pyproject.toml                 # Project config (uv)
+└── uv.lock                       # Locked dependencies
 ```
 
-### 1. AI Content Studio (Module 2)
-A multi-purpose marketing and operational tool designed for bakery staff and online engagement:
+---
 
-- **Batch Menu Descriptions (`/menu`)**:
-  - Generates mouth-watering descriptions for all available bakery items using a creative LLM configuration.
-  - Skips zero-priced items (`mango tart: 0 PKR`) before calling the model to save tokens and avoid advertising unavailable products.
-  - Calculates estimated cloud API costs ($\$0.015$ per 1K tokens) alongside local zero-cost token metrics.
-- **Streamed Social Media Generator (`/post <tone>`)**:
-  - Streams posts word-by-word with support for distinct brand tones:
-    - `fun`: Playful, energetic, short punchy sentences.
-    - `premium`: Elegant, calm, artisanal focus on morning-fresh baking.
-    - `urgent`: Limited-batch alerts encouraging same-day orders.
-  - Defensive fallback handles unrecognized tones (e.g., `/post pirate`) seamlessly.
-- **Roman Urdu Cultural Localization (Bonus)**:
-  - Automatically translates English marketing posts into natural, localized Pakistani Roman Urdu using a low-temperature model.
-  - Strictly preserves original PKR pricing, bakery hours, and city details without distortion.
-- **Zero-Token Price Lookups (`/price <item>`)**:
-  - Deterministic Python dictionary lookup (`facts["prices"].get(...)`).
-  - Completely bypasses the LLM for instant, 100% accurate, zero-token cost pricing answers.
-- **Grounded Conversational Chat with Memory**:
-  - Answers customer inquiries strictly from injected bakery facts (hours, DHA delivery, custom order advance notices).
-  - Employs a sliding context window (`max_messages=6`) preserving the initial system prompt to prevent context drift and unbounded token inflation.
-- **Comprehensive Session Analytics**:
-  - Tracks individual counts for chat responses, menu descriptions, social posts, price queries, total tokens accumulated, and total model execution time.
+## 🥐 Featured Projects
 
-### 2. AI Front Desk Assistant (Module 1)
-A customer-facing front-desk automation system combining deterministic speed with intelligent fallback:
-- **Complaint-First Intent Hierarchy**: Catches urgent issues and triggers immediate manager escalation.
-- **Interactive `/quote` Calculator**: Computes bulk orders, tiered discounts, and delivery fee rules with input validation.
-- **Privacy-Preserving Routing**: Detects sensitive PII (Phone/CNIC) and routes requests exclusively to local Ollama models for 100% data confidentiality.
+### 1. AI Business Assistant — Module 2 Final Capstone ⭐
 
-### 📋 Architectural Model & Intent Matrix
+> *Source: [`project_m2_business_assistant.py`](code/project_m2_business_assistant.py) · Design: [`project-m2-final-design.md`](docs/project-m2-final-design.md) · Results: [`project-m2-final-results.md`](docs/project-m2-final-results.md)*
 
-| Component | Operation | Model / Tool | Temperature | Purpose |
-| :--- | :--- | :--- | :--- | :--- |
-| **Customer Chat** | In-context Grounding | `precise_llm` (`gemma3:4b`) | `0.2` | Strictly factual responses; eliminates hallucinations |
-| **Menu Generator** | Creative Copywriting | `creative_llm` (`gemma3:4b`) | `0.8` | Varied, appetizing descriptions for pastries |
-| **Social Posts** | Tone-tuned Streaming | `creative_llm` (`gemma3:4b`) | `0.8` | Stylistic flair tailored to brand voice |
-| **Urdu Translation**| Semantic Mapping | `precise_llm` (`gemma3:4b`) | `0.2` | Accurate cultural localization retaining exact PKR/hours |
-| **Price Check** | Deterministic Lookup | Python Dictionary | N/A (0 Tokens) | Instant execution, 100% pricing accuracy |
-| **Privacy Check** | PII Detection & Route | Ollama (`llama3.2`) | `0.2` | 0-cost local inference protecting private customer data |
+A full **agentic AI assistant** for Sweet Crumbs Bakery that demonstrates real-world agentic patterns:
+
+| Capability | How It Works |
+| :--- | :--- |
+| **🔧 Tool-calling agent** | LangChain tools for price lookup, order status, FAQ answers, and order placement — the LLM decides which tool to call |
+| **✋ Human-in-the-loop** | Owner must approve or reject every order placement in the terminal before it's saved |
+| **📱 WhatsApp order import** | Extracts structured orders from messy English/Roman Urdu WhatsApp messages using Ollama JSON mode |
+| **🛡️ Hallucination guards** | Python validates every extracted field — catches invented names, plural normalization, off-menu items |
+| **💾 Persistent state** | Chat transcript, orders, and errors survive across sessions via JSON files |
+| **📊 Session reports** | End-of-session analytics with message counts, orders processed, and error summaries |
+| **⚡ Graceful error handling** | Connection failures and model errors logged to `errors.log` without crashing |
+
+```powershell
+uv run python code/project_m2_business_assistant.py
+```
+
+<details>
+<summary>📸 Terminal Screenshot</summary>
+
+![Module 2 Final Run](docs/project-m2-final-run.png)
+
+</details>
 
 ---
 
-## 💻 TechFix Laptop Care — Interactive Helper Bot
-*Source: [`code/lesson_08_mini_chatbot.py`](code/lesson_08_mini_chatbot.py)*
+### 2. AI Content Studio — Module 2 Checkpoint Capstone
 
-A rule-based and intent-prioritized support system built for a computer hardware repair shop in Hafeez Center, Lahore:
+> *Source: [`project_m2_content_studio.py`](code/project_m2_content_studio.py) · Design: [`project-m2-cp1-design.md`](docs/project-m2-cp1-design.md) · Results: [`project-m2-cp1-results.md`](docs/project-m2-cp1-results.md)*
 
-| Priority | Intent | Matching Keywords | Response Action |
+A multi-purpose marketing and operations tool for bakery staff:
+
+- **`/menu`** — Batch-generates appetizing descriptions for all in-stock items, skips zero-priced items, reports token usage and estimated cloud costs
+- **`/post <tone>`** — Streams social media posts word-by-word in `fun`, `premium`, or `urgent` brand voice
+- **Roman Urdu translation** — Auto-translates marketing posts into natural Pakistani Roman Urdu while preserving PKR prices and locations
+- **`/price <item>`** — Zero-token deterministic dictionary lookup (no LLM call, instant, 100% accurate)
+- **Grounded chat** — Answers customer questions strictly from injected business facts with sliding-window memory (`max_messages=6`)
+
+```powershell
+uv run python code/project_m2_content_studio.py
+```
+
+<details>
+<summary>📸 Terminal Screenshot</summary>
+
+![Module 2 Content Studio Run](docs/project-m2-cp1-run.png)
+
+</details>
+
+---
+
+### 3. AI Front Desk Assistant — Module 1 Capstone
+
+> *Source: [`project_m1_front_desk.py`](code/module-1/project_m1_front_desk.py) · Design: [`project-m1-part2-design.md`](docs/module-1/project-m1-part2-design.md) · Results: [`project-m1-part2-results.md`](docs/module-1/project-m1-part2-results.md)*
+
+A customer-facing automation combining deterministic speed with intelligent fallback:
+
+- **Complaint-first intent hierarchy** — Catches urgent issues and triggers immediate manager escalation
+- **Interactive `/quote` calculator** — Bulk orders, tiered discounts, and delivery fee rules with input validation
+- **Privacy-preserving routing** — Detects PII (phone/CNIC) and routes to local Ollama models for 100% data confidentiality
+
+```powershell
+uv run python code/module-1/project_m1_front_desk.py
+```
+
+---
+
+## 📚 Curriculum Map
+
+### Module 2: LLM Integration, Agents & Production AI
+
+| # | Lesson | Key Concepts | Source |
 | :---: | :--- | :--- | :--- |
-| **1** | **Complaint (Top Priority)** | `late`, `complaint`, `bad`, `broken` | Immediate apology and manager escalation callback |
-| **2** | **Human Handover** | `agent`, `human` | Instant transfer to on-duty technician and graceful exit |
-| **3** | **Greeting** | `hi`, `hello`, `salam` | Personalized welcome message |
-| **4** | **Timings** | `timing`, `time`, `open`, `hours` | Operating schedule (11:00 AM – 9:00 PM, Mon–Sat) |
-| **5** | **Fees & Pricing** | `fee`, `price`, `cost`, `charges` | Diagnostic and maintenance pricing starting at 1,500 PKR |
-| **6** | **Location** | `location`, `address`, `where` | Shop address (2nd Floor, Hafeez Center, Gulberg III, Lahore) |
-| **7** | **Appointment** | `appointment`, `book`, `repair`, `upgrade` | Booking intake workflow requesting laptop model |
-| **8** | **AI Fallback** | *(Any unmatched query)* | Structures a 2-line prompt for LLM completion |
+| **2.8** | First Tool-Calling Agent | LangChain tools, agentic loops, human approval gates | [`lesson_2_8_first_agent.py`](code/lesson_2_8_first_agent.py) |
+| **2.7** | Structured Extractor | Ollama JSON mode, schema validation, hallucination hunting | [`lesson_2_7_extractor.py`](code/lesson_2_7_extractor.py) |
+| **2.6** | Saved Bot | FAQ from JSON, persistent history, error logging | [`lesson_2_6_saved_bot.py`](code/lesson_2_6_saved_bot.py) |
+| **2.5** | AI Skills Toolkit | Reusable AI functions, summarization, translation, review replies | [`lesson_2_5_ai_skills.py`](code/lesson_2_5_ai_skills.py) |
+| **2.4** | Batch Writer | Automated batch generation, token accumulation, cost estimation | [`lesson_2_4_batch_writer.py`](code/lesson_2_4_batch_writer.py) |
+| **2.3** | Persona Bot | Dynamic persona switching, factual grounding | [`lesson_2_3_persona_bot.py`](code/lesson_2_3_persona_bot.py) |
+| **2.2** | Chat Memory | Multi-turn conversations, sliding-window context management | [`lesson_2_2_chat_memory.py`](code/lesson_2_2_chat_memory.py) |
+| **2.1** | First AI Call | LLM invocation, token counting, latency profiling | [`lesson_2_1_first_ai_call.py`](code/lesson_2_1_first_ai_call.py) |
+
+### Module 1: Foundations & Interactive Business Automations
+
+| # | Lesson | Key Concepts | Source |
+| :---: | :--- | :--- | :--- |
+| **08** | Mini Chatbot | Intent hierarchy, complaint routing, human handover | [`lesson_08_mini_chatbot.py`](code/module-1/lesson_08_mini_chatbot.py) |
+| **07** | Smart Router | Local vs. cloud model routing, privacy constraints | [`lesson_07_conditions.py`](code/module-1/lesson_07_conditions.py) |
+| **06** | String Hygiene | Prompt sanitization, input cleaning | [`lesson_06_strings_prompts.py`](code/module-1/lesson_06_strings_prompts.py) |
+| **05** | Variables | State & context management with typed variables | [`lesson_05_variables.py`](code/module-1/lesson_05_variables.py) |
+| **04** | Print & Input | Dynamic prompt generation, interactive I/O | [`lesson_04_print_input.py`](code/module-1/lesson_04_print_input.py) |
+| **02** | Toolkit Setup | Python, uv, Ollama, IDE diagnostics | [`lesson_02_toolkit.py`](code/module-1/lesson_02_toolkit.py) |
+| **01** | Intro | Learning roadmap & personal vision | [`lesson_01_intro.py`](code/module-1/lesson_01_intro.py) |
 
 ---
 
-## 🛠️ AI Dev Toolkit
+## 🧠 Architecture Overview
 
-- **Language**: Python 3.14+
-- **Environment & Dependency Manager**: [`uv`](https://astral.sh/uv) (high-performance Python packaging)
-- **Orchestration Framework**: LangChain (`langchain`, `langchain-ollama`, `init_chat_model`)
-- **Local LLM Engine**: [Ollama](https://ollama.ai) (defaulting to `gemma3:4b` for Content Studio; `qwen2.5:3b` and `llama3.2` for foundational modules)
-- **Development Tooling**: Antigravity IDE, Claude Code, Jupyter Notebooks (`ipykernel`)
-- **Primary OS**: Windows 11 / PowerShell
+```
+                    ┌──────────────────────────────────────────┐
+                    │      Sweet Crumbs AI Ecosystem           │
+                    └──────────────────┬───────────────────────┘
+                                       │
+       ┌───────────────────────────────┼───────────────────────────────┐
+       │                               │                               │
+       ▼                               ▼                               ▼
+┌──────────────┐            ┌───────────────────┐           ┌──────────────────┐
+│  Module 1    │            │  Module 2 (CP1)   │           │ Module 2 (Final) │
+│  Front Desk  │            │  Content Studio   │           │ Business Agent ⭐│
+├──────────────┤            ├───────────────────┤           ├──────────────────┤
+│ • Complaint  │            │ • Batch menu copy │           │ • Tool-calling   │
+│   routing    │            │ • Social posts    │           │   agent loop     │
+│ • /quote     │            │ • Roman Urdu i18n │           │ • Human approval │
+│   calculator │            │ • 0-token lookup  │           │ • WhatsApp import│
+│ • PII router │            │ • Sliding memory  │           │ • JSON extraction│
+│ • Rule + AI  │            │ • Session metrics │           │ • Error logging  │
+│   blend      │            │                   │           │ • Persistent I/O │
+└──────────────┘            └───────────────────┘           └──────────────────┘
+```
+
+### Model & Temperature Matrix
+
+| Component | Model | Temp | Purpose |
+| :--- | :--- | :---: | :--- |
+| Customer chat | `gemma3:4b` | 0.2 | Strictly factual, grounded responses |
+| Menu generator | `gemma3:4b` | 0.8 | Creative, appetizing descriptions |
+| Social posts | `gemma3:4b` | 0.8 | Stylistic brand-voice flair |
+| Urdu translation | `gemma3:4b` | 0.2 | Accurate localization, preserving prices |
+| Business agent | `qwen2.5:3b` | — | Tool-calling agent with agentic loop |
+| Privacy router | `llama3.2` | 0.2 | Zero-cost local PII-safe inference |
+| Price lookup | Python `dict` | N/A | Instant, 0 tokens, 100% accurate |
+
+---
+
+## 📄 Documentation
+
+### Module 2
+
+| Document | Description |
+| :--- | :--- |
+| [`project-m2-final-design.md`](docs/project-m2-final-design.md) | Architecture, tool definitions, test tables for the Business Assistant |
+| [`project-m2-final-results.md`](docs/project-m2-final-results.md) | Agent error analysis, WhatsApp hallucination catches, quality tests |
+| [`project-m2-cp1-design.md`](docs/project-m2-cp1-design.md) | Content Studio design, temperature allocation, facts mapping |
+| [`project-m2-cp1-results.md`](docs/project-m2-cp1-results.md) | Factual QA validation, tone analysis, Roman Urdu evaluation |
+| [`hallucination-hunt.md`](docs/hallucination-hunt.md) | Detailed hallucination analysis from WhatsApp order extraction |
+| [`my-answers-module-2.md`](docs/my-answers-module-2.md) | Conceptual checkpoint answers for Lessons 2.1–2.4 |
+
+### Module 1
+
+| Document | Description |
+| :--- | :--- |
+| [`project-m1-part2-design.md`](docs/module-1/project-m1-part2-design.md) | Front Desk architecture, intent hierarchy, pricing formulas |
+| [`project-m1-part2-results.md`](docs/module-1/project-m1-part2-results.md) | Local LLM test runs, grounded vs. hallucinated responses |
+| [`project-m1-results.md`](docs/module-1/project-m1-results.md) | Business Prompt Kit output evaluation |
+| [`my-answers-module-1.md`](docs/module-1/my-answers-module-1.md) | Conceptual checkpoint answers for Module 1 |
+| [`prompt-test.md`](docs/module-1/prompt-test.md) | Prompt engineering experiments |
+| [`ollama-first-chat.md`](docs/module-1/ollama-first-chat.md) | Local LLM setup verification |
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone & Setup Environment
+### Prerequisites
 
-Ensure [`uv`](https://astral.sh/uv) and [Ollama](https://ollama.ai) are installed on your machine:
+- [Python 3.14+](https://www.python.org/)
+- [`uv`](https://astral.sh/uv) — fast Python package manager
+- [Ollama](https://ollama.ai/) — local LLM runtime
+
+### Installation
 
 ```powershell
 # Clone the repository
 git clone https://github.com/AbdullahAhmed922/python-ai.git
 cd python-ai
 
-# Synchronize virtual environment with uv
+# Create virtual environment & install dependencies
 uv sync
 
-# Pull the primary local models used in the modules
-ollama pull gemma3:4b
-ollama pull qwen2.5:3b
-ollama pull llama3.2
+# Pull the local models
+ollama pull gemma3:4b      # Content Studio & extraction
+ollama pull qwen2.5:3b     # Business Assistant agent
+ollama pull llama3.2        # Privacy routing & support bot
 ```
 
-### 2. Running the Projects
+### Run the Projects
 
-#### 🥐 Sweet Crumbs AI Content Studio (Module 2 Capstone)
 ```powershell
+# ⭐ Module 2 Final: AI Business Assistant (agentic, tool-calling)
+uv run python code/project_m2_business_assistant.py
+
+# 🥐 Module 2 Checkpoint: AI Content Studio
 uv run python code/project_m2_content_studio.py
-```
-**Interactive Commands:**
-- `/menu` — Generate batch descriptions for all in-stock bakery items with token metrics and cloud cost estimates.
-- `/post fun` | `/post premium` | `/post urgent` — Stream an Instagram caption in the selected style, followed by a Roman Urdu version.
-- `/price <item>` — Perform instant, 0-token price lookups (e.g. `/price chocolate cake`, `/price mango tart`).
-- `/reset` — Clear conversation history while retaining system rules.
-- `bye` — Terminate session and display comprehensive usage statistics.
 
-#### 🏪 Sweet Crumbs AI Front Desk Assistant (Module 1 Capstone Part 2)
+# 🏪 Module 1: AI Front Desk Assistant
+uv run python code/module-1/project_m1_front_desk.py
+
+# 📝 Module 1: Business Prompt Kit
+uv run python code/module-1/project_m1_prompt_kit.py
+```
+
+<details>
+<summary><strong>Run individual lessons</strong></summary>
+
 ```powershell
-uv run python code/project_m1_front_desk.py
+# Module 2 Lessons
+uv run python code/lesson_2_8_first_agent.py      # Tool-calling agent
+uv run python code/lesson_2_7_extractor.py         # Structured extraction
+uv run python code/lesson_2_6_saved_bot.py         # Persistent bot
+uv run python code/lesson_2_5_ai_skills.py         # AI skills toolkit
+uv run python code/lesson_2_4_batch_writer.py      # Batch writer
+uv run python code/lesson_2_3_persona_bot.py       # Persona bot
+uv run python code/lesson_2_2_chat_memory.py       # Chat memory
+uv run python code/lesson_2_1_first_ai_call.py     # First AI call
+
+# Module 1 Lessons
+uv run python code/module-1/lesson_08_mini_chatbot.py
+uv run python code/module-1/lesson_07_conditions.py
+uv run python code/module-1/lesson_06_strings_prompts.py
+uv run python code/module-1/lesson_05_variables.py
+uv run python code/module-1/lesson_04_print_input.py
+uv run python code/module-1/lesson_02_toolkit.py
+uv run python code/module-1/lesson_01_intro.py
 ```
-*Try asking for store hours, entering `/quote` for order calculations, submitting a query containing phone numbers to observe privacy routing, or typing `bye` for session metrics.*
 
-#### 📝 Business Prompt Kit (Module 1 Capstone Part 1)
-```powershell
-uv run python code/project_m1_prompt_kit.py
-```
-
-#### 💻 TechFix Laptop Care Chatbot
-```powershell
-uv run python code/lesson_08_mini_chatbot.py
-```
-
-#### 🧪 Modular AI Lessons (Module 2)
-```powershell
-# Lesson 2.1: First AI Call with token & duration tracking
-uv run python code/lesson_2_1_first_ai_call.py
-
-# Lesson 2.2: Chat memory with sliding window context management
-uv run python code/lesson_2_2_chat_memory.py
-
-# Lesson 2.3: Persona-switching bot with factual grounding
-uv run python code/lesson_2_3_persona_bot.py
-
-# Lesson 2.4: Batch product writer with cost accumulation
-uv run python code/lesson_2_4_batch_writer.py
-```
+</details>
 
 ---
 
-## 📌 Engineering Principles & Key Learnings
+## 📌 Engineering Principles
 
-1. **Deterministic-First, AI-Second Architecture**:
-   Never spend model tokens on tasks solved by a hash table. Using Python dictionaries for pricing guarantees zero latency, $0 token cost, and 100% accuracy.
-2. **Temperature Separation**:
-   Customer support requires low entropy ($\text{temperature}=0.2$) to enforce factual grounding. Creative marketing copy demands higher variance ($\text{temperature}=0.8$) to deliver fresh, engaging prose.
-3. **Context Window Stewardship**:
-   Chat histories cannot grow indefinitely. Bounded sliding-window architectures (`messages = [system] + history[-N:]`) maintain predictable token consumption and latency.
-4. **Privacy & Zero-Cost Edge Inference**:
-   Sensitivities like phone numbers, CNICs, or proprietary customer data are routed to local Ollama models (`llama3.2`, `gemma3:4b`), providing air-gapped data privacy with zero API expenses.
-5. **Hallucination Prevention via Fact Injection**:
-   Strict system prompt boundaries instructing the assistant to answer *only* from supplied business facts prevent the model from inventing non-existent items or policies.
+| # | Principle | Why It Matters |
+| :---: | :--- | :--- |
+| 1 | **Deterministic-first, AI-second** | Never spend tokens on tasks solved by a dictionary lookup — zero latency, \$0 cost, 100% accuracy |
+| 2 | **Temperature separation** | Factual tasks at 0.2 (grounded); creative copy at 0.8 (varied). Never mix them |
+| 3 | **Context window stewardship** | Sliding-window memory (`[system] + history[-N:]`) prevents unbounded token growth |
+| 4 | **Human-in-the-loop for high-stakes actions** | Orders require explicit owner approval — the agent proposes, the human decides |
+| 5 | **Python validates, LLM generates** | Every structured LLM output is checked by Python (prices, names, menu items) before acting on it |
+| 6 | **Privacy via edge inference** | PII (phones, CNICs) routes to local Ollama models — air-gapped data privacy, zero API cost |
+| 7 | **Graceful degradation** | Connection errors and corrupt files are logged and recovered from, never crash the user session |
+| 8 | **Hallucination prevention** | Strict system-prompt boundaries + fact injection + Python guardrails prevent invented information |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+| :--- | :--- |
+| **Language** | Python 3.14 |
+| **Package Manager** | [`uv`](https://astral.sh/uv) |
+| **AI Framework** | [LangChain](https://www.langchain.com/) (langchain, langchain-ollama) |
+| **Local LLM Runtime** | [Ollama](https://ollama.ai/) — gemma3:4b, qwen2.5:3b, llama3.2 |
+| **Notebooks** | Jupyter / ipykernel |
+| **Dev Environment** | Antigravity IDE, Claude Code |
+| **OS** | Windows 11 / PowerShell |
 
 ---
 
 ## 👤 Author
 
-- **Abdullah Ahmed**
-- *Aspiring Applied AI & Agentic Workflow Engineer*
-- 📍 Lahore, Pakistan
-- 📧 [abd1962964@gmail.com](mailto:abd1962964@gmail.com)
+**Abdullah Ahmed**
+*Aspiring Applied AI & Agentic Workflow Engineer*
+
+📍 Lahore, Pakistan · 📧 [abd1962964@gmail.com](mailto:abd1962964@gmail.com) · 🔗 [GitHub](https://github.com/AbdullahAhmed922)

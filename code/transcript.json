@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "What are your hours?"
+  },
+  {
+    "role": "assistant",
+    "content": "Sweet Crumbs is open from 9 am to 10 pm, every day."
+  },
+  {
+    "role": "user",
+    "content": "Compare the price of a brownie and a cupcake"
+  },
+  {
+    "role": "assistant",
+    "content": "The brownie costs 300 PKR, while the cupcake costs 250 PKR. The brownie is more expensive."
+  },
+  {
+    "role": "user",
+    "content": "I am Ali, I want 2 brownies"
+  },
+  {
+    "role": "assistant",
+    "content": "Your order A101 has been placed. You will be charged 600 PKR for 2 x brownie. Please pay and we will prepare your order."
+  },
+  {
+    "role": "user",
+    "content": "Where is order A101?"
+  },
+  {
+    "role": "assistant",
+    "content": "Your order A101 for Ali is received and the total amount is 600 PKR. Your order is ready for payment."
+  }
+]

@@ -1,0 +1,2 @@
+[2026-11-13 06:14:55] Chat ResponseError (ResponseError): registry.ollama.ai/library/gemma3:4b does not support tools (status code: 400)
+[2026-11-13 06:15:03] Chat ResponseError (ResponseError): registry.ollama.ai/library/gemma3:4b does not support tools (status code: 400)

@@ -1,0 +1,16 @@
+{
+  "name": "Sweet Crumbs",
+  "type": "Artisan Bakery & Dessert Shop",
+  "city": "Lahore",
+  "address": "Shop 14, Main Boulevard, Gulberg III, Lahore",
+  "hours": "9 am to 10 pm, every day",
+  "delivery": "Free delivery in Gulberg on orders over 1,500 PKR; 200 PKR standard delivery across Lahore (45-60 mins).",
+  "contact": "0300-5551234",
+  "prices": {
+    "chocolate cake": 1500,
+    "brownie": 300,
+    "cupcake": 250,
+    "donut": 200,
+    "croissant": 350
+  }
+}
